@@ -13,18 +13,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Put the start of your free time here!"/>
-    <TimePicker
-        android:id="@+id/timePicker1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:id="@+id/freetimetext1"
+        android:text="your start time is:"
+        android:textSize="20dp"/>
 
-    </TimePicker>
+    <TextView
+        android:id="@+id/userfreetime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        />
     <Button
-        android:id="@+id/next1"
+        android:id="@+id/setfree1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Next"
-        android:onClick="nextSave1"/>
+        android:layout_height="wrap_content"
+        android:text="Set your free time start here!"
+        android:onClick="SetFree1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/freetimetext2"
+        android:text="your end time is"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/userfreetime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"/>
+    <Button
+        android:id="@+id/setfree2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set your free time end here!"
+        android:onClick="SetFree2" />
 
 </LinearLayout>
