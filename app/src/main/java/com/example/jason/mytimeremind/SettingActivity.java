@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import java.sql.Time;
 import java.util.Calendar;
-import java.util.Date;
 
 
 /**
@@ -17,11 +15,13 @@ import java.util.Date;
  */
 
 public class SettingActivity extends AppCompatActivity {
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_activity);
-        final TextView UserFreeTime1 = (TextView) findViewById(R.id.userfreetime1);
+
     }
 
 
@@ -37,7 +37,7 @@ public class SettingActivity extends AppCompatActivity {
                         currentTime.set(Calendar.HOUR_OF_DAY, selectedHour);
                         currentTime.set(Calendar.MINUTE, selectedMinute);
                         final TextView UserFreeTime1 = (TextView) findViewById(R.id.userfreetime1);
-                        UserFreeTime1.setText(selectedHour+":"+selectedMinute);
+                        UserFreeTime1.setText(selectedHour + ":" + selectedMinute);
 
                     }
                 }, hour1, minute1, false);

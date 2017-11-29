@@ -10,36 +10,38 @@
         android:id="@+id/yourtimezone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintVertical_bias="0.101"
-        android:textSize="20dp" />
+        app:layout_constraintVertical_bias="0.101" />
+
     <Button
         android:id="@+id/addbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="addCont"
+        android:text="ADD"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
-        app:layout_constraintVertical_bias="0.937"
-        android:text="ADD"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
     <Button
         android:id="@+id/setbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setBtn"
+        android:text="Settings"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintVertical_bias="0.937"
-        android:text="Settings"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
 
 </android.support.constraint.ConstraintLayout>

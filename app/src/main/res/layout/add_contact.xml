@@ -1,10 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <TextView
+        android:id="@+id/addacthint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set"/>
+        android:text="Enter Your Contact Information Here!"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/contactname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contact Name" />
+
+    <TextView
+        android:id="@+id/spinnerhint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your contact's TimeZone!"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/timespinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/addtimehintstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your contact's free time start time!"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/startcontdisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/startcont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startCont"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/addacthintend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your contact's free time end time"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/endcontdisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/endcont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="endCont"
+        android:text="End" />
+
+    <Button
+        android:id="@+id/addsbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addContact"
+        android:text="Add Contact" />
+
 
 </LinearLayout>

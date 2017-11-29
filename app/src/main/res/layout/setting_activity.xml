@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/settingtext"
@@ -9,42 +10,46 @@
         android:layout_height="wrap_content"
         android:text="Set Your Schedule Here!"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
-        android:textSize="50dp"/>
+        android:textSize="50dp" />
+
     <TextView
+        android:id="@+id/freetimetext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/freetimetext1"
         android:text="your start time is:"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/userfreetime1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50dp"
-        />
+        android:textSize="50dp" />
+
     <Button
         android:id="@+id/setfree1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Set your free time start here!"
-        android:onClick="SetFree1"/>
+        android:onClick="SetFree1"
+        android:text="Set your free time start here!" />
+
     <TextView
+        android:id="@+id/freetimetext2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/freetimetext2"
-        android:text="your end time is"
-        android:textSize="20dp"/>
+        android:text="your end time is:"
+        android:textSize="20dp" />
+
     <TextView
         android:id="@+id/userfreetime2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50dp"/>
+        android:textSize="50dp" />
+
     <Button
         android:id="@+id/setfree2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Set your free time end here!"
-        android:onClick="SetFree2" />
+        android:onClick="SetFree2"
+        android:text="Set your free time end here!" />
 
 </LinearLayout>
