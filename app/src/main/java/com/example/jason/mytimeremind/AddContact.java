@@ -1,6 +1,8 @@
 package com.example.jason.mytimeremind;
 
 import android.app.TimePickerDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.icu.util.TimeZone;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,6 +22,16 @@ import java.util.Calendar;
  */
 
 public class AddContact extends AppCompatActivity {
+    SharedPreferences sharedprefrences1;
+    TextView contactName;
+    TextView addedcnttimedispstrt;
+    TextView addedcnttimedispend;
+    public static final String myPrefrences1 = "mypref1";
+    public static final String Contactname = "contactnameKey";
+    public static final String CntTimeDispStart = "cnttimedispstartKey";
+    public static final String CntTimeDispEnd = "cntntimedispendKey";
+
+
     Spinner timeOpt;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -28,6 +40,20 @@ public class AddContact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_contact);
         String[] options = TimeZone.getAvailableIDs();
+        ////sharedprefrences stuff
+        contactName = (TextView) findViewById(R.id.contactname);
+        addedcnttimedispstrt = (TextView) findViewById(R.id.startcontdisp);
+        addedcnttimedispend = (TextView) findViewById(R.id.endcontdisp);
+        sharedprefrences1 = getSharedPreferences(myPrefrences1, Context.MODE_PRIVATE);
+        if (sharedprefrences1.contains(Contactname)) {
+            contactName.setText(sharedprefrences1.getString(Contactname,""));
+        }
+        if (sharedprefrences1.contains(CntTimeDispStart)){
+            addedcnttimedispstrt.setText(sharedprefrences1.getString(CntTimeDispStart, ""));
+        }
+        if (sharedprefrences1.contains(CntTimeDispEnd)){
+            addedcnttimedispend.setText(sharedprefrences1.getString(CntTimeDispStart, ""));
+        }
         timeOpt = (Spinner) findViewById(R.id.timespinner);
         ArrayList<String> timelist = new ArrayList<>();
         for (int i = 0; i < options.length; i++) {
@@ -77,6 +103,13 @@ public class AddContact extends AppCompatActivity {
     }
 
     public void addContact(View v) {
-
+        String CN = contactName.getText().toString();
+        String TCD1 = addedcnttimedispstrt.getText().toString();
+        String TCD2 = addedcnttimedispend.getText().toString();
+        SharedPreferences.Editor editor1 = sharedprefrences1.edit();
+        editor1.putString(Contactname, CN);
+        editor1.putString(CntTimeDispStart, TCD1);
+        editor1.putString(CntTimeDispEnd, TCD2);
+        editor1.commit();
     }
 }
