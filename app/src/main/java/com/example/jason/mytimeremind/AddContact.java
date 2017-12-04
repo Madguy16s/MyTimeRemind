@@ -2,6 +2,7 @@ package com.example.jason.mytimeremind;
 
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.icu.util.TimeZone;
 import android.os.Build;
@@ -111,5 +112,7 @@ public class AddContact extends AppCompatActivity {
         editor1.putString(CntTimeDispStart, TCD1);
         editor1.putString(CntTimeDispEnd, TCD2);
         editor1.commit();
+        Intent saveCont = new Intent(this, MainActivity.class);
+        startActivity(saveCont);
     }
 }
